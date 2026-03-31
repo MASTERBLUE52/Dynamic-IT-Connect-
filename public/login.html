@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Dynamic IT Services</title>
+    <meta name="description" content="Login or register to place IT service orders on Dynamic IT Services." />
+    <link rel="icon" type="image/png" href="/images/logo/logo.png" />
+    <link rel="shortcut icon" type="image/png" href="/images/logo/logo.png" />
+    <link rel="stylesheet" href="/auth.css" />
+  </head>
+  <body>
+    <main class="auth-shell">
+      <section class="auth-card">
+        <div class="auth-head">
+          <a class="back-link" href="/">&#8592; Back to Home</a>
+          <h1>Welcome to Dynamic IT Services</h1>
+          <p>Login to continue, create a new account, or reset your password.</p>
+        </div>
+
+        <div class="tab-row" role="tablist" aria-label="Authentication Tabs">
+          <button class="tab-btn active" data-tab="login" role="tab" aria-selected="true">Login</button>
+          <button class="tab-btn" data-tab="register" role="tab" aria-selected="false">Register</button>
+          <button class="tab-btn" data-tab="forgot" role="tab" aria-selected="false">Forgot Password</button>
+        </div>
+
+        <div class="tab-panel active" data-panel="login">
+          <form id="login-form" class="auth-form">
+            <label>Email<input type="email" name="email" required /></label>
+            <label>Password<input type="password" name="password" minlength="6" required /></label>
+            <label class="inline-check">
+              <input type="checkbox" id="login-show-pass" />
+              <span>Show password</span>
+            </label>
+            <div class="action-row">
+              <button type="button" class="link-btn" data-tab-jump="forgot">Forgot password?</button>
+              <button type="submit" class="auth-btn">Login</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="tab-panel" data-panel="register">
+          <form id="register-form" class="auth-form">
+            <label>Full Name<input type="text" name="name" required /></label>
+            <label>Email<input type="email" name="email" required /></label>
+            <label>Password<input type="password" id="register-password" name="password" minlength="6" required /></label>
+            <label>Re-enter Password<input type="password" id="register-confirm-password" name="confirmPassword" minlength="6" required /></label>
+            <p class="helper-line">
+              Suggested strong password:
+              <button type="button" id="suggested-pass-btn" class="link-btn-inline"></button>
+            </p>
+            <p id="match-status" class="match-status"></p>
+            <button type="submit" class="auth-btn">Create Account</button>
+          </form>
+        </div>
+
+        <div class="tab-panel" data-panel="forgot">
+          <form id="forgot-form" class="auth-form">
+            <label>Registered Email<input type="email" name="email" required /></label>
+            <div class="action-row">
+              <button type="button" id="send-otp-btn" class="link-btn">Send OTP</button>
+            </div>
+            <label>OTP<input type="text" name="otp" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" required /></label>
+            <div class="action-row">
+              <button type="button" id="verify-otp-btn" class="auth-btn auth-btn-ghost">Verify OTP</button>
+            </div>
+            <div id="new-pass-block" class="hidden">
+              <label>New Password<input type="password" name="newPassword" minlength="6" /></label>
+              <label>Re-enter New Password<input type="password" name="confirmNewPassword" minlength="6" /></label>
+              <button type="submit" class="auth-btn">Create New Password</button>
+            </div>
+          </form>
+        </div>
+
+        <p id="auth-status" class="auth-status" role="status" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <script src="/auth.js"></script>
+  </body>
+</html>
+
+

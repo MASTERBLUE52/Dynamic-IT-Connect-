@@ -1,0 +1,16 @@
+{
+  "name": "dynamicitservices",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Responsive full-stack website for Dynamic IT Services",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "set PORT=3001&& node server.js",
+    "start:3001": "set PORT=3001&& node server.js"
+  },
+  "dependencies": {
+    "mongodb": "^6.16.0",
+    "nodemailer": "^6.10.1"
+  }
+}

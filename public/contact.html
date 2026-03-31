@@ -1,0 +1,109 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Dynamic IT Services</title>
+    <meta
+      name="description"
+      content="Contact Dynamic IT Services for web development, digital growth, and IT solutions."
+    />
+    <link rel="icon" type="image/png" href="/images/logo/logo.png" />
+    <link rel="shortcut icon" type="image/png" href="/images/logo/logo.png" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-row">
+        <a class="brand" href="/">
+          <img class="brand-logo" src="/images/logo/logo.png" alt="Dynamic IT Services logo" />
+          <span class="brand-copy">
+            <span class="brand-name">Dynamic IT Connect</span>
+            <span class="brand-tagline">where services meet technology</span>
+          </span>
+        </a>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+        <nav id="site-nav" class="site-nav">
+          <a href="/">Home</a>
+          <a href="/about.html">About Us</a>
+          <a href="/services.html">Services</a>
+          <a href="/service-order.html">Services Ordering</a>
+          <a href="/categories.html">Categories</a>
+          <a href="/portfolio.html">Portfolio</a>
+          <a class="active-nav" href="/contact.html">Contact Us</a>
+          <a id="login-link" href="/login.html">Login</a>
+          <div id="auth-user" class="auth-user hidden" aria-live="polite">
+            <span id="auth-avatar" class="auth-avatar" title="Logged in user"></span>
+            <span id="auth-name" class="auth-name"></span>
+            <button id="logout-btn" class="auth-logout-btn" type="button">Logout</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container contact-grid">
+          <div>
+            <h1>Contact Us</h1>
+            <p class="section-copy">Tell us about your project requirements and timeline.</p>
+            <p><strong>Dynamic IT Services</strong></p>
+            <p>
+              3/543, 2nd Floor, Morkas Street,<br />
+              Zampa Bazaar, Surat - 395003.
+            </p>
+            <p>
+              <strong>Call Us :</strong>
+              <a href="tel:+912612412628">+91-261-2412628</a>,
+              <a href="tel:+919825704952">+91-9825704952</a>
+            </p>
+            <p>
+              <strong>Email :</strong>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=adnan@dynamicit.co.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                >adnan@dynamicit.co.in</a
+              >
+            </p>
+            <p class="section-copy">If Gmail does not open, copy this email: adnan@dynamicit.co.in</p>
+            <div class="map-embed">
+              <iframe
+                title="Dynamic IT Services Location"
+                src="https://www.google.com/maps?q=3/543%202nd%20Floor%20Morkas%20Street%20Zampa%20Bazaar%20Surat%20395003&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <form id="contact-form" class="contact-form">
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Send Inquiry</button>
+            <p id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Dynamic IT Services. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="/contact.js"></script>
+  </body>
+</html>
+

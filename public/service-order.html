@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services Ordering | Dynamic IT Services</title>
+    <meta name="description" content="Explore core services by Dynamic IT Services." />
+    <link rel="icon" type="image/png" href="/images/logo/logo.png" />
+    <link rel="shortcut icon" type="image/png" href="/images/logo/logo.png" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/service-order.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-row">
+        <a class="brand" href="/">
+          <img class="brand-logo" src="/images/logo/logo.png" alt="Dynamic IT Services logo" />
+          <span class="brand-copy">
+            <span class="brand-name">Dynamic IT Connect</span>
+            <span class="brand-tagline">where services meet technology</span>
+          </span>
+        </a>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+        <nav id="site-nav" class="site-nav">
+          <a href="/">Home</a>
+          <a href="/services.html">Services</a>
+          <a class="active-nav" href="/service-order.html">Services Ordering</a>
+          <a id="login-link" href="/login.html">Login</a>
+          <div id="auth-user" class="auth-user hidden" aria-live="polite">
+            <span id="auth-avatar" class="auth-avatar" title="Logged in user"></span>
+            <span id="auth-name" class="auth-name"></span>
+            <button id="logout-btn" class="auth-logout-btn" type="button">Logout</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="services-main">
+      <section class="services-hero">
+        <div class="container">
+          <p class="eyebrow">Our Expertise</p>
+          <h1>Services Ordering</h1>
+          <p class="section-copy">
+            Click any service to view its details. Service-level offerings will be added next.
+          </p>
+          <p id="auth-note" class="auth-note"></p>
+          <p><a href="/my-orders.html">View My Orders</a></p>
+        </div>
+      </section>
+
+      <section class="section service-explorer">
+        <div class="container explorer-grid">
+          <aside class="service-list-wrap">
+            <h2>Service Categories</h2>
+            <div id="service-list" class="service-list" role="tablist" aria-label="Services"></div>
+          </aside>
+
+          <article class="service-detail-card">
+            <p class="detail-kicker">Service Details</p>
+            <div id="service-top-slider" class="service-top-slider hidden" aria-label="Static web development preview images"></div>
+            <h2 id="service-title"></h2>
+            <p id="service-description" class="service-description"></p>
+            <div id="service-modules" class="service-modules"></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Dynamic IT Services. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="/service-order.js"></script>
+  </body>
+</html>
+
+

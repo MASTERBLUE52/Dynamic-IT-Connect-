@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment | Dynamic IT Services</title>
+    <meta name="description" content="Complete your service payment securely." />
+    <link rel="icon" type="image/png" href="/images/logo/logo.png" />
+    <link rel="shortcut icon" type="image/png" href="/images/logo/logo.png" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/payment.css" />
+  </head>
+  <body>
+    <main class="payment-main">
+      <div class="payment-wrap">
+        <div class="gateway-shell">
+          <div class="gateway-top">
+            <a class="back-link" href="/service-order.html" aria-label="Back to services ordering">&#8592;</a>
+            <h1>Complete Payment</h1>
+            <span class="secure-badge">&#128274; 100% Secure</span>
+          </div>
+
+          <div class="gateway-body">
+            <aside class="method-list" aria-label="Payment methods">
+              <button class="method-item is-active" type="button" data-method="card">
+                <span class="method-title">Credit / Debit / ATM Card</span>
+                <span class="method-sub">Add and secure cards as per guidelines</span>
+              </button>
+              <button class="method-item" type="button" data-method="netbanking">
+                <span class="method-title">Net Banking</span>
+                <span class="method-sub">Pay using your bank account</span>
+              </button>
+              <button class="method-item" type="button" data-method="upi">
+                <span class="method-title">UPI</span>
+                <span class="method-sub">Pay instantly with UPI ID</span>
+              </button>
+            </aside>
+
+            <section class="payment-center">
+              <p class="gateway-note">Note: This is a demo gateway for student project testing.</p>
+              <form id="payment-form" class="payment-form">
+                <input type="hidden" name="paymentMethod" id="payment-method" value="card" />
+
+                <div id="card-fields">
+                  <div class="field-block">
+                    <label for="card-number">Card Number</label>
+                    <input
+                      id="card-number"
+                      name="cardNumber"
+                      type="text"
+                      inputmode="numeric"
+                      maxlength="16"
+                      placeholder="XXXXXXXXXXXXXXXX"
+                    />
+                  </div>
+
+                  <div class="field-row">
+                    <div class="field-block">
+                      <label for="card-expiry">Valid Thru</label>
+                      <input
+                        id="card-expiry"
+                        name="cardExpiry"
+                        type="text"
+                        inputmode="numeric"
+                        maxlength="5"
+                        placeholder="MM / YY"
+                      />
+                    </div>
+                    <div class="field-block">
+                      <label for="card-cvv">CVV</label>
+                      <input id="card-cvv" name="cardCvv" type="password" inputmode="numeric" maxlength="4" placeholder="CVV" />
+                    </div>
+                  </div>
+                </div>
+
+                <div id="netbanking-fields" class="hidden-field">
+                  <div class="field-block">
+                    <label for="bank-name">Bank</label>
+                    <select id="bank-name" name="bankName">
+                      <option value="">Select bank</option>
+                      <option value="State Bank of India">State Bank of India</option>
+                      <option value="HDFC Bank">HDFC Bank</option>
+                      <option value="ICICI Bank">ICICI Bank</option>
+                      <option value="Axis Bank">Axis Bank</option>
+                      <option value="Bank of Baroda">Bank of Baroda</option>
+                    </select>
+                  </div>
+                  <div class="field-block">
+                    <label for="account-holder">Account Holder Name</label>
+                    <input id="account-holder" name="accountHolder" type="text" placeholder="Full name" />
+                  </div>
+                </div>
+
+                <div id="upi-fields" class="hidden-field">
+                  <div class="field-block">
+                    <label for="upi-id">UPI ID</label>
+                    <input id="upi-id" name="upiId" type="text" placeholder="name@upi" />
+                  </div>
+                </div>
+
+                <div class="field-row">
+                  <div class="field-block">
+                    <label for="customer-name">Name</label>
+                    <input id="customer-name" type="text" name="customerName" required />
+                  </div>
+                  <div class="field-block">
+                    <label for="customer-phone">Phone</label>
+                    <input id="customer-phone" type="tel" name="customerPhone" required />
+                  </div>
+                </div>
+
+                <div class="field-block">
+                  <label for="customer-email">Email</label>
+                  <input id="customer-email" type="email" name="customerEmail" required />
+                </div>
+
+                <button id="pay-btn" class="pay-btn" type="submit">Pay</button>
+                <div id="payment-status" class="payment-status" role="status" aria-live="polite"></div>
+              </form>
+            </section>
+
+            <aside class="payment-right">
+              <div class="amount-card">
+                <div class="amount-row">
+                  <span>MRP (incl. of all taxes)</span>
+                  <strong id="mrp-amount">&#8377;0</strong>
+                </div>
+                <div class="amount-row total">
+                  <span>Total Amount</span>
+                  <strong id="total-amount">&#8377;0</strong>
+                </div>
+              </div>
+
+              <div id="order-summary" class="order-summary"></div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="/payment.js"></script>
+  </body>
+</html>
+
+

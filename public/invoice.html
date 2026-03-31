@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice | Dynamic IT Services</title>
+    <meta name="description" content="Payment invoice" />
+    <link rel="icon" type="image/png" href="/images/logo/logo.png" />
+    <link rel="shortcut icon" type="image/png" href="/images/logo/logo.png" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/invoice.css" />
+  </head>
+  <body>
+    <main class="invoice-main">
+      <div class="invoice-wrap">
+        <article class="invoice-card" id="invoice-card">
+          <header class="invoice-head">
+            <div>
+              <h1>Payment Invoice</h1>
+              <p class="invoice-brand">Dynamic IT Services</p>
+            </div>
+            <div class="invoice-status">PAID</div>
+          </header>
+
+          <section id="invoice-content" class="invoice-content"></section>
+
+          <footer class="invoice-actions">
+            <a class="btn btn-secondary" href="/service-order.html">Back to Services</a>
+            <button id="download-invoice" class="btn btn-primary" type="button">Download Invoice</button>
+            <button id="print-invoice" class="btn btn-secondary" type="button">Print</button>
+          </footer>
+        </article>
+      </div>
+    </main>
+
+    <script src="/invoice.js"></script>
+  </body>
+</html>
+
+

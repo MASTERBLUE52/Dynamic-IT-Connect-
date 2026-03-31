@@ -1,0 +1,119 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Categories | Dynamic IT Services</title>
+    <meta
+      name="description"
+      content="Explore technology and outsourcing categories offered by Dynamic IT Services."
+    />
+    <link rel="icon" type="image/png" href="/images/logo/logo.png" />
+    <link rel="shortcut icon" type="image/png" href="/images/logo/logo.png" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-row">
+        <a class="brand" href="/">
+          <img class="brand-logo" src="/images/logo/logo.png" alt="Dynamic IT Services logo" />
+          <span class="brand-copy">
+            <span class="brand-name">Dynamic IT Connect</span>
+            <span class="brand-tagline">where services meet technology</span>
+          </span>
+        </a>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+        <nav id="site-nav" class="site-nav">
+          <a href="/">Home</a>
+          <a href="/about.html">About Us</a>
+          <a href="/services.html">Services</a>
+          <a href="/service-order.html">Services Ordering</a>
+          <a href="/categories.html">Categories</a>
+          <a href="/portfolio.html">Portfolio</a>
+          <a href="/contact.html">Contact Us</a>
+          <a id="login-link" href="/login.html">Login</a>
+          <div id="auth-user" class="auth-user hidden" aria-live="polite">
+            <span id="auth-avatar" class="auth-avatar" title="Logged in user"></span>
+            <span id="auth-name" class="auth-name"></span>
+            <button id="logout-btn" class="auth-logout-btn" type="button">Logout</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section categories-page">
+        <div class="container categories-wrap">
+          <div class="categories-intro">
+            <h1>Unlimited <span>Customization</span></h1>
+            <p class="section-copy">
+              In a highly competitive environment, even a small advantage can make a big difference.
+              Understanding the benefits of global IT collaboration and strategic outsourcing helps businesses
+              stay agile, innovative, and cost-effective.
+            </p>
+          </div>
+
+          <div class="categories-grid">
+            <article class="category-card">
+              <img src="/images/categories/tech.jpg" alt="Technologies" loading="lazy" />
+              <div class="category-card-body">
+                <h3>Technologies</h3>
+                <p>
+                  <span class="category-highlight">Web:</span> HTML, DHTML, JavaScript, AJAX, VB Script, CSS, PHP, JSP, ASP, Web Services
+                </p>
+                <p>
+                  <span class="category-highlight">Development:</span> C, C++, Java, J2EE, .NET (VB, C#)
+                </p>
+                <p>
+                  <span class="category-highlight">Reporting:</span> Crystal Reports, Jasper Reports
+                </p>
+              </div>
+            </article>
+
+            <article class="category-card">
+              <img src="/images/categories/outsourcing.jpg" alt="IT Outsourcing" loading="lazy" />
+              <div class="category-card-body">
+                <h3>IT Outsourcing</h3>
+                <p>
+                  We deliver flexible outsourced IT services for forward-thinking businesses. Our solutions allow you
+                  to scale strategically without the burden of high-risk IT infrastructure or long-term commitments.
+                </p>
+              </div>
+            </article>
+
+            <article class="category-card">
+              <img src="/images/categories/freelancer.jpg" alt="Our Freelancers" loading="lazy" />
+              <div class="category-card-body">
+                <h3>Our Freelancers</h3>
+                <p>
+                  PHP Developers, .NET Developers, Graphic Designers, Java Developers, Web Designers, SEO Experts,
+                  Data Entry Operators, Linux Server Admins, and Mobile App Developers available on demand.
+                </p>
+              </div>
+            </article>
+
+            <article class="category-card">
+              <img src="/images/categories/startup.jpg" alt="Startup Outsourcing" loading="lazy" />
+              <div class="category-card-body">
+                <h3>Startup Outsourcing</h3>
+                <p>
+                  We support startups with tailored development strategies, aligned IT planning, and predictable
+                  monthly costs helping you grow with confidence and stability.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Dynamic IT Services. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="/services.js"></script>
+  </body>
+</html>
+

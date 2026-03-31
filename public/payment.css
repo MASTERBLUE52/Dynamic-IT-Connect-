@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #efefef;
+  color: #171717;
+}
+
+.payment-main {
+  padding: 0.65rem;
+  min-height: 100vh;
+}
+
+.payment-wrap {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.gateway-shell {
+  background: #f3f3f3;
+  border: 1px solid #d5d5d5;
+  border-radius: 0.9rem;
+  overflow: hidden;
+}
+
+.gateway-top {
+  display: grid;
+  grid-template-columns: 2.1rem 1fr auto;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.95rem 1rem;
+  border-bottom: 1px solid #dbdbdb;
+  background: #f7f7f7;
+}
+
+.back-link {
+  color: #111;
+  text-decoration: none;
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.gateway-top h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.secure-badge {
+  font-weight: 700;
+  color: #2f2f2f;
+  background: #ececec;
+  border: 1px solid #d8d8d8;
+  border-radius: 0.45rem;
+  padding: 0.35rem 0.55rem;
+}
+
+.gateway-body {
+  display: grid;
+  grid-template-columns: 32% 34% 34%;
+  min-height: 670px;
+}
+
+.method-list {
+  border-right: 1px solid #d9d9d9;
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+}
+
+.method-item {
+  border: 0;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 1rem 1.05rem;
+  text-align: left;
+  background: #f4f4f4;
+  cursor: pointer;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.method-item.is-active {
+  background: #ffffff;
+}
+
+.method-item.is-disabled {
+  color: #969696;
+  cursor: not-allowed;
+}
+
+.method-title {
+  font-size: 1.55rem;
+  font-weight: 700;
+}
+
+.method-sub {
+  font-size: 1.05rem;
+  color: #4b4b4b;
+}
+
+.payment-center {
+  border-right: 1px solid #d9d9d9;
+  padding: 0.9rem 1rem 1rem;
+  background: #f1f1f1;
+}
+
+.gateway-note {
+  margin: 0 0 0.8rem;
+  color: #4b4b4b;
+  font-size: 1.1rem;
+}
+
+.payment-form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.field-block {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.field-block label {
+  font-size: 1.08rem;
+  color: #262626;
+}
+
+.field-block select,
+.field-block input {
+  width: 100%;
+  border: 1px solid #c5c5c5;
+  border-radius: 0.5rem;
+  padding: 0.75rem 0.8rem;
+  font-size: 1.2rem;
+  background: #fff;
+}
+
+.hidden-field {
+  display: none;
+}
+
+.pay-btn {
+  margin-top: 0.25rem;
+  border: 0;
+  border-radius: 0.45rem;
+  background: #ffcc00;
+  color: #161616;
+  font-weight: 800;
+  font-size: 2rem;
+  padding: 0.7rem 0.95rem;
+  cursor: pointer;
+}
+
+.pay-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.payment-status {
+  min-height: 1.2rem;
+  font-weight: 700;
+}
+
+.payment-status.success {
+  color: #0d6f47;
+}
+
+.payment-status.error {
+  color: #af1a1a;
+}
+
+.payment-right {
+  padding: 0.9rem;
+  background: #f1f1f1;
+  display: grid;
+  align-content: start;
+  gap: 0.8rem;
+}
+
+.amount-card {
+  border: 1px solid #d4d9e7;
+  border-radius: 0.7rem;
+  background: #e6ebf7;
+  padding: 0.8rem;
+}
+
+.amount-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.1rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid #d0d5e0;
+}
+
+.amount-row:last-child {
+  border-bottom: 0;
+}
+
+.amount-row.total strong {
+  color: #2d5eff;
+}
+
+.order-summary {
+  border: 1px solid #d8d8d8;
+  border-radius: 0.7rem;
+  background: #ffffff;
+  padding: 0.75rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.summary-row {
+  border: 1px solid #e6e6e6;
+  border-radius: 0.55rem;
+  padding: 0.55rem 0.6rem;
+  background: #fafafa;
+}
+
+.summary-label {
+  display: block;
+  color: #666;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.summary-value {
+  font-weight: 700;
+}
+
+.summary-list {
+  margin: 0.4rem 0 0;
+  padding-left: 1rem;
+}
+
+@media (max-width: 1260px) {
+  .gateway-body {
+    grid-template-columns: 1fr;
+  }
+
+  .method-list,
+  .payment-center {
+    border-right: 0;
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  .method-title {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .gateway-top {
+    grid-template-columns: 1.8rem 1fr;
+  }
+
+  .secure-badge {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+
+  .gateway-top h1 {
+    font-size: 1.35rem;
+  }
+
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+
+  .pay-btn {
+    font-size: 1.35rem;
+  }
+}
