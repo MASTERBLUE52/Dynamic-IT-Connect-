@@ -2,7 +2,7 @@
   "name": "dynamicitservices",
   "version": "1.0.0",
   "private": true,
-  "description": "Responsive full-stack website for Dynamic IT Services",
+  "description": "Full-stack web platform for Dynamic IT Connect",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
